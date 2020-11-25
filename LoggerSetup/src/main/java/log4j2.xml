@@ -4,7 +4,7 @@
 			<PatternLayout pattern = "%message %ex{short.message} %n" />
 		</Console>
 		<File name = "logFile" fileName = "debug.log" append = "false">
-			<PatternLayout pattern = "[00%sn %-3level{lowerCase=true}] %class.%method %t: %m %ex{3}%n" />
+			<PatternLayout pattern = "[00%sn %level{lowerCase=true}] %class.%method %t: %m %ex{3}%n" />
 		</File>
 		
 	
@@ -21,10 +21,4 @@
 	
 	
 	</Loggers>
-
-
-
-
-
-
 </Configuration>
