@@ -4,10 +4,10 @@
 <Configuration status="WARN">
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="%message %ex{short.message} %n"></PatternLayout>
+			<PatternLayout pattern="%m %throwable{short.message} %n"></PatternLayout>
 		</Console>
 		<File name="logFile" fileName="debug.log" append="false">
-			<PatternLayout pattern="[00%sn %level{lowerCase=true}] %class.%method %t: %m %ex{3}%n"></PatternLayout>
+			<PatternLayout pattern="[00%sn %level{lowerCase=true}] %class.%method %t: %m %throwable{3}%n"></PatternLayout>
 		</File>
 	</Appenders>
 	<Loggers>
