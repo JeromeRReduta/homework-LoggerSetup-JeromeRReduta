@@ -1,4 +1,8 @@
-<Configuration status = "warn">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE log4j:configuration>
+<!-- Status determines which log4j log messages are included. -->
+<Configuration status="WARN">
+	
 	<Appenders>
 		<Console name = "Console" target = "SYSTEM_OUT">
 			<PatternLayout pattern = "%message %ex{short.message} %n" />
@@ -6,19 +10,17 @@
 		<File name = "logFile" fileName = "debug.log" append = "false">
 			<PatternLayout pattern = "[00%sn %level{lowerCase=true}] %class.%method %t: %m %ex{3}%n" />
 		</File>
-		
-	
 	</Appenders>
+	
 	<Loggers>
-	<Logger name = "LoggerSetup" level = "ALL" additivity = "false">
-		<AppenderRef ref = "Console" level = "WARN" />
-		<AppenderRef ref = "logFile" level = "ALL" />
-	</Logger>
+		<Logger name = "LoggerSetup" level = "ALL" additivity = "false">
+			<AppenderRef ref = "Console" level = "WARN" />
+			<AppenderRef ref = "logFile" level = "ALL" />
+		</Logger>
+		
 		<Root level = "ALL">
 			<AppenderRef ref = "Console" level = "INFO"/>
 		</Root>
-	
-	
-	
 	</Loggers>
+	
 </Configuration>
